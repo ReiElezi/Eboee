@@ -24,7 +24,7 @@ window.EBO_DATA = {
       },
       "sq": {
         "t": "Rinovime të plota",
-        "d": "Apartamente, banesa dhe ambiente biznesi — nga prishja deri te dorëzimi."
+        "d": "Apartamente, banesa dhe ambiente biznesi  nga prishja deri te dorëzimi."
       }
     },
     {
