@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://reielezi.github.io/Eboee/sitemap.xml
+Sitemap: https://eboee.gr/sitemap.xml
