@@ -509,3 +509,9 @@ a.info:hover{ transform:translateX(4px); background:var(--glass-2); }
     transition-duration:.01ms !important; scroll-behavior:auto !important; }
   .reveal{ opacity:1; transform:none; filter:none; }
 }
+
+/* ---------- Areas served (SEO lokal) ---------- */
+.areas{ padding:0 0 clamp(48px,7vw,90px); }
+.areas h2{ font-size:clamp(1.15rem,2.4vw,1.5rem); font-weight:400; margin-bottom:10px; }
+.areas p{ color:var(--ink-2); font-size:.92rem; max-width:70ch; }
+.areas-list{ margin-top:10px; color:var(--ink-3) !important; font-size:.85rem; line-height:2; }

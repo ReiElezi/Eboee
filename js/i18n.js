@@ -101,6 +101,9 @@ window.I18N = {
     "info.hours": "Ωράριο",
     "info.hoursV": "Δευ–Παρ 08:00–19:00 · Σάβ 09:00–15:00",
 
+    "areas.title": "Περιοχές εξυπηρέτησης",
+    "areas.lead": "Αναλαμβάνουμε ανακαινίσεις, γυψοσανίδες, πλακάκια, σπατουλάρισμα, ελαιοχρωματισμούς και μονώσεις σε όλη την Αθήνα και την Αττική:",
+
     "footer.tag": "Σχεδιασμός. Κατασκευή. Παράδοση. — Αθήνα, Ελλάδα",
     "footer.rights": "Με επιφύλαξη παντός δικαιώματος."
   },
@@ -201,6 +204,9 @@ window.I18N = {
     "info.hours": "Hours",
     "info.hoursV": "Mon–Fri 08:00–19:00 · Sat 09:00–15:00",
 
+    "areas.title": "Areas we serve",
+    "areas.lead": "We take on renovations, drywall, tiling, plastering, painting and insulation across Athens and the whole of Attica:",
+
     "footer.tag": "Designed. Built. Delivered. — Athens, Greece",
     "footer.rights": "All rights reserved."
   },
@@ -300,6 +306,9 @@ window.I18N = {
     "info.areaV": "Athinë & Atikë",
     "info.hours": "Orari",
     "info.hoursV": "Hën–Pre 08:00–19:00 · Sht 09:00–15:00",
+
+    "areas.title": "Zonat ku punojmë",
+    "areas.lead": "Marrim përsipër rinovime, gips, pllaka, shpatullim, lyerje dhe izolim në gjithë Athinën dhe Atikën:",
 
     "footer.tag": "Projektuar. Ndërtuar. Dorëzuar. — Athinë, Greqi",
     "footer.rights": "Të gjitha të drejtat e rezervuara."
