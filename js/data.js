@@ -68,7 +68,8 @@ window.EBO_DATA = {
   categories: [
     { id: "interior",   el: "Εσωτερικοί χώροι", en: "Interiors",   sq: "Ambiente të brendshme" },
     { id: "marble",     el: "Μάρμαρο",          en: "Marble",      sq: "Mermer" },
-    { id: "renovation", el: "Ανακαινίσεις",     en: "Renovations", sq: "Rinovime" }
+    { id: "renovation", el: "Ανακαινίσεις",     en: "Renovations", sq: "Rinovime" },
+    { id: "bathroom",   el: "Μπάνια",            en: "Bathrooms",   sq: "Banjo" }
   ],
 
   /* ---- project photos ---- */
@@ -101,6 +102,56 @@ window.EBO_DATA = {
     { img: "assets/projects/p6.jpg", cat: "renovation",
       el: { t: "Apartment Renovation", p: "Προετοιμασία δαπέδου · Διαμέρισμα" },
       en: { t: "Apartment Renovation", p: "Floor preparation · Apartment" },
-      sq: { t: "Apartment Renovation", p: "Përgatitje dyshemeje · Apartament" } }
+      sq: { t: "Apartment Renovation", p: "Përgatitje dyshemeje · Apartament" } },
+
+    { img: "assets/projects/p7.jpg", cat: "renovation",
+      el: { t: "Parquet & Painting", p: "Παρκέ & ελαιοχρωματισμοί · Διαμέρισμα" },
+      en: { t: "Parquet & Painting", p: "Parquet floors & painting" },
+      sq: { t: "Parquet & Painting", p: "Parket & lyerje" } },
+
+    { img: "assets/projects/p8.jpg", cat: "renovation",
+      el: { t: "Bedroom Renovation", p: "Υπνοδωμάτιο με εντοιχισμένη ντουλάπα" },
+      en: { t: "Bedroom Renovation", p: "Bedroom with fitted wardrobe" },
+      sq: { t: "Bedroom Renovation", p: "Dhomë gjumi me dollap" } },
+
+    { img: "assets/projects/p9.jpg", cat: "renovation",
+      el: { t: "Bedroom & Balcony", p: "Υπνοδωμάτιο με έξοδο σε μπαλκόνι" },
+      en: { t: "Bedroom & Balcony", p: "Bedroom opening to the balcony" },
+      sq: { t: "Bedroom & Balcony", p: "Dhomë me dalje në ballkon" } },
+
+    { img: "assets/projects/p10.jpg", cat: "renovation",
+      el: { t: "Hallway", p: "Διάδρομος & εσωτερικές πόρτες" },
+      en: { t: "Hallway", p: "Hallway & interior doors" },
+      sq: { t: "Hallway", p: "Korridor & dyer të brendshme" } },
+
+    { img: "assets/projects/p11.jpg", cat: "bathroom",
+      el: { t: "Marble Bathroom", p: "Μπάνιο με μάρμαρο & συρόμενη πόρτα" },
+      en: { t: "Marble Bathroom", p: "Marble bathroom with sliding door" },
+      sq: { t: "Marble Bathroom", p: "Banjo me mermer & derë rrëshqitëse" } },
+
+    { img: "assets/projects/p12.jpg", cat: "bathroom",
+      el: { t: "Bathroom Details", p: "Επένδυση τοίχων με πλακάκια μαρμάρου" },
+      en: { t: "Bathroom Details", p: "Marble-effect wall cladding" },
+      sq: { t: "Bathroom Details", p: "Veshje muri me pllaka mermeri" } },
+
+    { img: "assets/projects/p13.jpg", cat: "bathroom",
+      el: { t: "Luxury Shower", p: "Ντουζιέρα με μαύρο μάρμαρο & κρυφό φωτισμό" },
+      en: { t: "Luxury Shower", p: "Shower in black marble with hidden lighting" },
+      sq: { t: "Luxury Shower", p: "Dush me mermer të zi & ndriçim" } },
+
+    { img: "assets/projects/p14.jpg", cat: "bathroom",
+      el: { t: "Guest WC", p: "WC με κρεμαστή λεκάνη & δάπεδο ξύλου" },
+      en: { t: "Guest WC", p: "Guest WC, wall-hung pan, wood floor" },
+      sq: { t: "Guest WC", p: "WC me dysheme druri" } },
+
+    { img: "assets/projects/p15.jpg", cat: "bathroom",
+      el: { t: "Bathroom Suite", p: "Μπάνιο με ντουζιέρα, έπιπλο & καθρέπτη" },
+      en: { t: "Bathroom Suite", p: "Bathroom with shower, vanity & mirror" },
+      sq: { t: "Bathroom Suite", p: "Banjo me dush, mobilje & pasqyrë" } },
+
+    { img: "assets/projects/p16.jpg", cat: "renovation",
+      el: { t: "Drywall in Progress", p: "Εργασίες γυψοσανίδας εν εξελίξει" },
+      en: { t: "Drywall in Progress", p: "Drywall works under way" },
+      sq: { t: "Drywall in Progress", p: "Punime gipsi në vazhdim" } }
   ]
 };
