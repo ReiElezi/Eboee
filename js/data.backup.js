@@ -88,7 +88,7 @@ window.EBO_DATA = {
       },
       "sq": {
         "t": "Shpatullim & lyerje",
-        "d": "Shpatullim i mureve dhe tavaneve, astar dhe bojatisje — punë e pastër dhe e përfunduar."
+        "d": "Shpatullim i mureve dhe tavaneve, astar dhe bojatisje  punë e pastër dhe e përfunduar."
       }
     },
     {
