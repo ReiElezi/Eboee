@@ -163,6 +163,8 @@
       if (strong && text) strong.textContent = text;
     };
     set("#infoPhone", "tel:" + (c.phoneRaw || ""), c.phoneLabel);
+    const call = $("#fabCall");
+    if (call) call.setAttribute("href", "tel:" + (c.phoneRaw || ""));
     set("#infoEmail", "mailto:" + (c.email || ""), c.email);
     set("#infoIg", c.instagram, c.instagramHandle);
     updateWaLinks();
