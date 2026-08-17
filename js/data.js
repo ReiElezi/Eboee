@@ -119,7 +119,7 @@ window.EBO_DATA = {
       "id": "marble",
       "el": "Μάρμαρο",
       "en": "Marble",
-      "sq": "Mermer 4567"
+      "sq": "Mermer "
     },
     {
       "id": "renovation",
