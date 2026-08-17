@@ -7,8 +7,8 @@ window.I18N = {
 
   /* ---------------- ΕΛΛΗΝΙΚΑ ---------------- */
   el: {
-    "meta.title": "EBO.EE — Ανακαινίσεις & Κατασκευές στην Αθήνα",
-    "meta.desc": "EBO.EE — Σχεδιασμός, κατασκευή και παράδοση χώρων υψηλής αισθητικής στην Αθήνα.",
+    "meta.title": "Ανακαινίσεις, Γυψοσανίδες & Πλακάκια στην Αθήνα | EBO.EE",
+    "meta.desc": "Ολικές ανακαινίσεις, γυψοσανίδες, ψευδοροφές, σπατουλάρισμα, ελαιοχρωματισμοί, πλακάκια, μάρμαρα και μονώσεις στην Αθήνα και σε όλη την Αττική. 20 χρόνια εμπειρίας — δωρεάν προσφορά.",
 
     "nav.services": "Υπηρεσίες",
     "nav.projects": "Έργα",
@@ -107,8 +107,8 @@ window.I18N = {
 
   /* ---------------- ENGLISH ---------------- */
   en: {
-    "meta.title": "EBO.EE — Renovations & Building in Athens",
-    "meta.desc": "EBO.EE — designed, built and delivered renovations and interiors in Athens, Greece.",
+    "meta.title": "Renovations, Drywall & Tiling in Athens | EBO.EE",
+    "meta.desc": "Full renovations, drywall and false ceilings, plastering, painting, tiling, marble and insulation across Athens and Attica. 20 years of experience — free quote.",
 
     "nav.services": "Services",
     "nav.projects": "Projects",
@@ -207,8 +207,8 @@ window.I18N = {
 
   /* ---------------- SHQIP ---------------- */
   sq: {
-    "meta.title": "EBO.EE — Rinovime & Ndërtime në Athinë",
-    "meta.desc": "EBO.EE — projektim, ndërtim dhe dorëzim ambientesh me cilësi të lartë në Athinë.",
+    "meta.title": "Rinovime, Gips & Pllaka në Athinë | EBO.EE",
+    "meta.desc": "Rinovime të plota, gips dhe tavane, shpatullim, lyerje, pllaka, mermer dhe izolim në Athinë dhe Atikë. 20 vjet përvojë — ofertë falas.",
 
     "nav.services": "Shërbimet",
     "nav.projects": "Projektet",
