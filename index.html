@@ -204,6 +204,14 @@
   </div>
 </section>
 
+<!-- ==== AD SLOT (mid-page, between Projects and Process) ====
+     Reserved, fixed-aspect box — never sits on/near the "Request a quote"
+     CTA. Stays hidden (zero layout footprint) until AdSense or an active
+     sponsor is configured; see js/ads-config.js and js/sponsors.json. -->
+<div class="container">
+  <div class="ad-slot" id="adSlotMid" aria-label="Sponsor" hidden></div>
+</div>
+
 <!-- ==== PROCESS ==== -->
 <section class="section" id="process">
   <div class="container">
@@ -369,6 +377,11 @@
   </div>
 </section>
 
+<!-- ==== AD SLOT (bottom of homepage) ==== -->
+<div class="container">
+  <div class="ad-slot" id="adSlotFooter" aria-label="Sponsor" hidden></div>
+</div>
+
 </main>
 
 <!-- ==== FOOTER ==== -->
@@ -435,6 +448,8 @@
 <script src="js/data.js"></script>
 <script src="js/i18n.js"></script>
 <script src="js/main.js"></script>
+<script src="js/ads-config.js"></script>
+<script src="js/adslot.js"></script>
 
 <script type="application/ld+json">
 {

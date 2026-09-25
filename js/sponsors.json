@@ -1,0 +1,13 @@
+{
+  "sponsors": [
+    {
+      "id": "example-sponsor",
+      "name": "Example Sponsor",
+      "image": "assets/sponsors/example.jpg",
+      "url": "https://example.com",
+      "active": false,
+      "startDate": "2026-01-01",
+      "endDate": "2026-12-31"
+    }
+  ]
+}
