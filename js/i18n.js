@@ -8,7 +8,7 @@ window.I18N = {
   /* ---------------- ΕΛΛΗΝΙΚΑ ---------------- */
   el: {
     "meta.title": "Ανακαινίσεις, Γυψοσανίδες & Πλακάκια στην Αθήνα | EBO.EE",
-    "meta.desc": "Ολικές ανακαινίσεις, γυψοσανίδες, ψευδοροφές, σπατουλάρισμα, ελαιοχρωματισμοί, πλακάκια, μάρμαρα και μονώσεις στην Αθήνα και σε όλη την Αττική. 20 χρόνια εμπειρίας — δωρεάν προσφορά.",
+    "meta.desc": "Ολικές ανακαινίσεις, γυψοσανίδες, ψευδοροφές, σπατουλάρισμα, ελαιοχρωματισμοί, πλακάκια, μάρμαρα και μονώσεις στην Αθήνα. 20 χρόνια εμπειρίας — δωρεάν προσφορά.",
 
     "nav.services": "Υπηρεσίες",
     "nav.projects": "Έργα",
@@ -40,7 +40,7 @@ window.I18N = {
 
     "projects.eyebrow": "Έργα",
     "projects.title": "Επιλεγμένα έργα",
-    "projects.lead": "Λίγα από αυτά που παραδώσαμε πρόσφατα στην Αττική.",
+    "projects.lead": "Λίγα από αυτά που παραδώσαμε πρόσφατα στην Αθήνα.",
 
     "filter.all": "Όλα",
 
@@ -65,7 +65,12 @@ window.I18N = {
     "about.b3": "Υλικά από επώνυμους προμηθευτές",
     "about.b4": "Εγγύηση καλής εκτέλεσης εργασιών",
     "about.badgeT": "EBO.EE",
-    "about.badgeS": "Αθήνα · από το 2006",
+    "about.badgeS": "Αθήνα",
+
+    "reviews.eyebrow": "Κριτικές",
+    "reviews.title": "Τι λένε οι πελάτες μας",
+    "reviews.lead": "Πραγματικές κριτικές από το προφίλ μας στο Google.",
+    "reviews.cta": "Δείτε όλες τις κριτικές στο Google",
 
     "contact.eyebrow": "Επικοινωνία",
     "contact.title": "Πείτε μας τι έχετε στο μυαλό σας",
@@ -97,12 +102,12 @@ window.I18N = {
     "info.phone": "Τηλέφωνο",
     "info.email": "Email",
     "info.area": "Περιοχή",
-    "info.areaV": "Αθήνα & Αττική",
+    "info.areaV": "Αθήνα",
     "info.hours": "Ωράριο",
     "info.hoursV": "Δευτέρα–Σάββατο 08:00–19:00",
 
     "areas.title": "Περιοχές εξυπηρέτησης",
-    "areas.lead": "Αναλαμβάνουμε ανακαινίσεις, γυψοσανίδες, πλακάκια, σπατουλάρισμα, ελαιοχρωματισμούς και μονώσεις σε όλη την Αθήνα και την Αττική:",
+    "areas.lead": "Αναλαμβάνουμε ανακαινίσεις, γυψοσανίδες, πλακάκια, σπατουλάρισμα, ελαιοχρωματισμούς και μονώσεις σε όλη την Αθήνα:",
 
     "footer.tag": "Σχεδιασμός. Κατασκευή. Παράδοση. — Αθήνα, Ελλάδα",
     "footer.rights": "Με επιφύλαξη παντός δικαιώματος."
@@ -111,7 +116,7 @@ window.I18N = {
   /* ---------------- ENGLISH ---------------- */
   en: {
     "meta.title": "Renovations, Drywall & Tiling in Athens | EBO.EE",
-    "meta.desc": "Full renovations, drywall and false ceilings, plastering, painting, tiling, marble and insulation across Athens and Attica. 20 years of experience — free quote.",
+    "meta.desc": "Full renovations, drywall and false ceilings, plastering, painting, tiling, marble and insulation across Athens. 20 years of experience — free quote.",
 
     "nav.services": "Services",
     "nav.projects": "Projects",
@@ -143,7 +148,7 @@ window.I18N = {
 
     "projects.eyebrow": "Projects",
     "projects.title": "Selected work",
-    "projects.lead": "A few of the spaces we delivered recently across Attica.",
+    "projects.lead": "A few of the spaces we delivered recently across Athens.",
 
     "filter.all": "All",
 
@@ -168,7 +173,12 @@ window.I18N = {
     "about.b3": "Materials from established suppliers",
     "about.b4": "Workmanship guarantee",
     "about.badgeT": "EBO.EE",
-    "about.badgeS": "Athens · Since 2006",
+    "about.badgeS": "Athens",
+
+    "reviews.eyebrow": "Reviews",
+    "reviews.title": "What our clients say",
+    "reviews.lead": "Real reviews from our Google Business Profile.",
+    "reviews.cta": "See all reviews on Google",
 
     "contact.eyebrow": "Contact",
     "contact.title": "Tell us what you have in mind",
@@ -200,12 +210,12 @@ window.I18N = {
     "info.phone": "Phone",
     "info.email": "Email",
     "info.area": "Area",
-    "info.areaV": "Athens & Attica",
+    "info.areaV": "Athens",
     "info.hours": "Hours",
     "info.hoursV": "Monday–Saturday 08:00–19:00",
 
     "areas.title": "Areas we serve",
-    "areas.lead": "We take on renovations, drywall, tiling, plastering, painting and insulation across Athens and the whole of Attica:",
+    "areas.lead": "We take on renovations, drywall, tiling, plastering, painting and insulation across Athens:",
 
     "footer.tag": "Designed. Built. Delivered. — Athens, Greece",
     "footer.rights": "All rights reserved."
@@ -214,7 +224,7 @@ window.I18N = {
   /* ---------------- SHQIP ---------------- */
   sq: {
     "meta.title": "Rinovime, Gips & Pllaka në Athinë | EBO.EE",
-    "meta.desc": "Rinovime të plota, gips dhe tavane, shpatullim, lyerje, pllaka, mermer dhe izolim në Athinë dhe Atikë. 20 vjet përvojë — ofertë falas.",
+    "meta.desc": "Rinovime të plota, gips dhe tavane, shpatullim, lyerje, pllaka, mermer dhe izolim në Athinë. 20 vjet përvojë — ofertë falas.",
 
     "nav.services": "Shërbimet",
     "nav.projects": "Projektet",
@@ -246,7 +256,7 @@ window.I18N = {
 
     "projects.eyebrow": "Projektet",
     "projects.title": "Punë të përzgjedhura",
-    "projects.lead": "Disa nga ambientet që kemi dorëzuar së fundmi në Atikë.",
+    "projects.lead": "Disa nga ambientet që kemi dorëzuar së fundmi në Athinë.",
 
     "filter.all": "Të gjitha",
 
@@ -271,7 +281,12 @@ window.I18N = {
     "about.b3": "Materiale nga furnitorë të njohur",
     "about.b4": "Garanci për cilësinë e punimeve",
     "about.badgeT": "EBO.EE",
-    "about.badgeS": "Athinë · që nga 2006",
+    "about.badgeS": "Athinë",
+
+    "reviews.eyebrow": "Vlerësime",
+    "reviews.title": "Çfarë thonë klientët tanë",
+    "reviews.lead": "Vlerësime reale nga profili ynë në Google.",
+    "reviews.cta": "Shiko të gjitha vlerësimet në Google",
 
     "contact.eyebrow": "Kontakt",
     "contact.title": "Na tregoni çfarë keni në mendje",
@@ -303,12 +318,12 @@ window.I18N = {
     "info.phone": "Telefoni",
     "info.email": "Email",
     "info.area": "Zona",
-    "info.areaV": "Athinë & Atikë",
+    "info.areaV": "Athinë",
     "info.hours": "Orari",
     "info.hoursV": "E hënë–E shtunë 08:00–19:00",
 
     "areas.title": "Zonat ku punojmë",
-    "areas.lead": "Marrim përsipër rinovime, gips, pllaka, shpatullim, lyerje dhe izolim në gjithë Athinën dhe Atikën:",
+    "areas.lead": "Marrim përsipër rinovime, gips, pllaka, shpatullim, lyerje dhe izolim në gjithë Athinën:",
 
     "footer.tag": "Projektuar. Ndërtuar. Dorëzuar. — Athinë, Greqi",
     "footer.rights": "Të gjitha të drejtat e rezervuara."

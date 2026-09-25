@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#0A0A0B">
 <title data-i18n="meta.title">Ανακαινίσεις, Γυψοσανίδες &amp; Πλακάκια στην Αθήνα | EBO.EE</title>
-<meta name="description" data-i18n-attr="content:meta.desc" content="Ολικές ανακαινίσεις, γυψοσανίδες, ψευδοροφές, σπατουλάρισμα, ελαιοχρωματισμοί, πλακάκια, μάρμαρα και μονώσεις στην Αθήνα και σε όλη την Αττική. 20 χρόνια εμπειρίας — δωρεάν προσφορά.">
+<meta name="description" data-i18n-attr="content:meta.desc" content="Ολικές ανακαινίσεις, γυψοσανίδες, ψευδοροφές, σπατουλάρισμα, ελαιοχρωματισμοί, πλακάκια, μάρμαρα και μονώσεις στην Αθήνα. 20 χρόνια εμπειρίας — δωρεάν προσφορά.">
 <!-- ==== Ndrysho vetem kete rresht kur te lidhesh domain-in ==== -->
 <link rel="canonical" href="https://eboee.gr/">
 
@@ -16,7 +16,7 @@
 <meta property="og:locale:alternate" content="en_US">
 <meta property="og:locale:alternate" content="sq_AL">
 <meta property="og:title" data-i18n-attr="content:meta.title" content="Ανακαινίσεις, Γυψοσανίδες & Πλακάκια στην Αθήνα | EBO.EE">
-<meta property="og:description" data-i18n-attr="content:meta.desc" content="Ολικές ανακαινίσεις, γυψοσανίδες, ψευδοροφές, σπατουλάρισμα, ελαιοχρωματισμοί, πλακάκια, μάρμαρα και μονώσεις στην Αθήνα και σε όλη την Αττική. 20 χρόνια εμπειρίας — δωρεάν προσφορά.">
+<meta property="og:description" data-i18n-attr="content:meta.desc" content="Ολικές ανακαινίσεις, γυψοσανίδες, ψευδοροφές, σπατουλάρισμα, ελαιοχρωματισμοί, πλακάκια, μάρμαρα και μονώσεις στην Αθήνα. 20 χρόνια εμπειρίας — δωρεάν προσφορά.">
 <meta property="og:url" content="https://eboee.gr/">
 <meta property="og:image" content="https://eboee.gr/assets/projects/hero.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -26,14 +26,36 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<!-- Google Analytics (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-7L6V8TTKS7"></script>
+<!-- ==== Consent Mode v2 — duhet te vije PARA gtag.js ==== -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  (function(){
+    var saved = null;
+    try { saved = localStorage.getItem('ebo-consent'); } catch(e){}
+    var ok = saved === 'granted';
+    gtag('consent', 'default', {
+      'ad_storage':            ok ? 'granted' : 'denied',
+      'ad_user_data':          ok ? 'granted' : 'denied',
+      'ad_personalization':    ok ? 'granted' : 'denied',
+      'analytics_storage':     ok ? 'granted' : 'denied',
+      'functionality_storage': 'granted',
+      'security_storage':      'granted',
+      'wait_for_update': 500
+    });
+    gtag('set', 'ads_data_redaction', !ok);
+    gtag('set', 'url_passthrough', true);
+  })();
+</script>
+
+<!-- ==== Google tag: GA4 + Google Ads ==== -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7L6V8TTKS7"></script>
+<script>
   gtag('js', new Date());
   gtag('config', 'G-7L6V8TTKS7');
 </script>
+<!-- ID-ja e Google Ads dhe etiketat e konversioneve rrine te js/track.js -->
+<script src="js/track.js"></script>
 
 <noscript><style>.reveal{opacity:1;transform:none;filter:none}</style></noscript>
 </head>
@@ -97,7 +119,7 @@
 <!-- ==== HERO ==== -->
 <section class="hero" id="home">
   <div class="hero-media" aria-hidden="true">
-    <img src="assets/projects/hero.jpg" alt="Ανακαίνιση καθιστικού με τζάκι και κρυφό φωτισμό — EBO.EE Αθήνα">
+    <img src="assets/projects/hero.jpg" width="1440" height="1800" fetchpriority="high" decoding="async" alt="Ανακαίνιση καθιστικού με τζάκι και κρυφό φωτισμό — EBO.EE Αθήνα">
     <span class="hero-veil"></span>
   </div>
 
@@ -173,7 +195,7 @@
     <header class="section-head reveal">
       <span class="eyebrow" data-i18n="projects.eyebrow">Έργα</span>
       <h2 data-i18n="projects.title">Επιλεγμένα έργα</h2>
-      <p data-i18n="projects.lead">Λίγα από αυτά που παραδώσαμε πρόσφατα στην Αττική.</p>
+      <p data-i18n="projects.lead">Λίγα από αυτά που παραδώσαμε πρόσφατα στην Αθήνα.</p>
     </header>
 
     <div class="filters glass-inset reveal" id="projectFilters" role="group" aria-label="Filter"></div>
@@ -222,7 +244,7 @@
       <img src="assets/projects/p3.jpg" alt="" loading="lazy">
       <div class="about-badge glass">
         <strong data-i18n="about.badgeT">EBO.EE</strong>
-        <span data-i18n="about.badgeS">Αθήνα · από το 2006</span>
+        <span data-i18n="about.badgeS">Αθήνα</span>
       </div>
     </div>
     <div class="about-copy reveal" data-delay="1">
@@ -237,6 +259,29 @@
         <li data-i18n="about.b4">Εγγύηση καλής εκτέλεσης εργασιών</li>
       </ul>
       <a href="#contact" class="btn btn-primary" data-i18n="cta.talk">Ας μιλήσουμε για το έργο σας</a>
+    </div>
+  </div>
+</section>
+
+<!-- ==== REVIEWS (Google Business Profile) ==== -->
+<!-- Reviews are fetched at publish time by fetch-reviews.ps1 into js/reviews.json
+     (never shipped as a live browser call, so the Google API key stays local).
+     Note: the Google Places API returns at most the 5 most recent/relevant
+     reviews — that is a limit of the API itself, not a bug to fix here.
+     The whole section stays hidden until js/reviews.json has at least one
+     review, so nothing shows until it's actually configured. -->
+<section class="section" id="reviews" hidden>
+  <div class="container">
+    <header class="section-head reveal">
+      <span class="eyebrow" data-i18n="reviews.eyebrow">Κριτικές</span>
+      <h2 data-i18n="reviews.title">Τι λένε οι πελάτες μας</h2>
+      <p data-i18n="reviews.lead">Πραγματικές κριτικές από το προφίλ μας στο Google.</p>
+    </header>
+
+    <div class="grid-reviews" id="reviewsGrid"></div>
+
+    <div class="reviews-cta reveal" id="reviewsCta" hidden>
+      <a href="#" target="_blank" rel="noopener" class="btn btn-ghost" id="reviewsGoogleLink" data-i18n="reviews.cta">Δείτε όλες τις κριτικές στο Google</a>
     </div>
   </div>
 </section>
@@ -304,7 +349,7 @@
         </a>
         <div class="info glass">
           <span class="info-ico"><svg viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg></span>
-          <span><small data-i18n="info.area">Περιοχή</small><strong data-i18n="info.areaV">Αθήνα & Αττική</strong></span>
+          <span><small data-i18n="info.area">Περιοχή</small><strong data-i18n="info.areaV">Αθήνα</strong></span>
         </div>
         <div class="info glass">
           <span class="info-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></span>
@@ -319,7 +364,7 @@
 <section class="areas">
   <div class="container">
     <h2 data-i18n="areas.title">Περιοχές εξυπηρέτησης</h2>
-    <p data-i18n="areas.lead">Αναλαμβάνουμε ανακαινίσεις, γυψοσανίδες, πλακάκια, σπατουλάρισμα, ελαιοχρωματισμούς και μονώσεις σε όλη την Αθήνα και την Αττική:</p>
+    <p data-i18n="areas.lead">Αναλαμβάνουμε ανακαινίσεις, γυψοσανίδες, πλακάκια, σπατουλάρισμα, ελαιοχρωματισμούς και μονώσεις σε όλη την Αθήνα:</p>
     <p class="areas-list">Αθήνα · Πειραιάς · Γλυφάδα · Βούλα · Βουλιαγμένη · Άλιμος · Ελληνικό · Νέα Σμύρνη · Παλαιό Φάληρο · Καλλιθέα · Μαρούσι · Κηφισιά · Χαλάνδρι · Βριλήσσια · Αγία Παρασκευή · Χολαργός · Ζωγράφου · Βύρωνας · Ηλιούπολη · Αργυρούπολη · Περιστέρι · Αιγάλεω · Ίλιον · Πετρούπολη · Γέρακας · Παλλήνη · Σπάτα · Κορωπί · Μαρκόπουλο · Ραφήνα · Αρτέμιδα</p>
   </div>
 </section>
@@ -404,7 +449,7 @@
   "email": "artan.elezi40@gmail.com",
   "foundingDate": "2006",
   "address": { "@type": "PostalAddress", "addressLocality": "Αθήνα", "addressCountry": "GR" },
-  "areaServed": [{ "@type": "City", "name": "Αθήνα" }, { "@type": "City", "name": "Πειραιάς" }, { "@type": "City", "name": "Γλυφάδα" }, { "@type": "City", "name": "Βούλα" }, { "@type": "City", "name": "Βουλιαγμένη" }, { "@type": "City", "name": "Άλιμος" }, { "@type": "City", "name": "Ελληνικό" }, { "@type": "City", "name": "Νέα Σμύρνη" }, { "@type": "City", "name": "Παλαιό Φάληρο" }, { "@type": "City", "name": "Καλλιθέα" }, { "@type": "City", "name": "Μαρούσι" }, { "@type": "City", "name": "Κηφισιά" }, { "@type": "City", "name": "Χαλάνδρι" }, { "@type": "City", "name": "Βριλήσσια" }, { "@type": "City", "name": "Αγία Παρασκευή" }, { "@type": "City", "name": "Χολαργός" }, { "@type": "City", "name": "Ζωγράφου" }, { "@type": "City", "name": "Βύρωνας" }, { "@type": "City", "name": "Ηλιούπολη" }, { "@type": "City", "name": "Αργυρούπολη" }, { "@type": "City", "name": "Περιστέρι" }, { "@type": "City", "name": "Αιγάλεω" }, { "@type": "City", "name": "Ίλιον" }, { "@type": "City", "name": "Πετρούπολη" }, { "@type": "City", "name": "Γέρακας" }, { "@type": "City", "name": "Παλλήνη" }, { "@type": "City", "name": "Σπάτα" }, { "@type": "City", "name": "Κορωπί" }, { "@type": "City", "name": "Μαρκόπουλο" }, { "@type": "City", "name": "Ραφήνα" }, { "@type": "City", "name": "Αρτέμιδα" }, { "@type": "AdministrativeArea", "name": "Αττική" }],
+  "areaServed": [{ "@type": "City", "name": "Αθήνα" }, { "@type": "City", "name": "Πειραιάς" }, { "@type": "City", "name": "Γλυφάδα" }, { "@type": "City", "name": "Βούλα" }, { "@type": "City", "name": "Βουλιαγμένη" }, { "@type": "City", "name": "Άλιμος" }, { "@type": "City", "name": "Ελληνικό" }, { "@type": "City", "name": "Νέα Σμύρνη" }, { "@type": "City", "name": "Παλαιό Φάληρο" }, { "@type": "City", "name": "Καλλιθέα" }, { "@type": "City", "name": "Μαρούσι" }, { "@type": "City", "name": "Κηφισιά" }, { "@type": "City", "name": "Χαλάνδρι" }, { "@type": "City", "name": "Βριλήσσια" }, { "@type": "City", "name": "Αγία Παρασκευή" }, { "@type": "City", "name": "Χολαργός" }, { "@type": "City", "name": "Ζωγράφου" }, { "@type": "City", "name": "Βύρωνας" }, { "@type": "City", "name": "Ηλιούπολη" }, { "@type": "City", "name": "Αργυρούπολη" }, { "@type": "City", "name": "Περιστέρι" }, { "@type": "City", "name": "Αιγάλεω" }, { "@type": "City", "name": "Ίλιον" }, { "@type": "City", "name": "Πετρούπολη" }, { "@type": "City", "name": "Γέρακας" }, { "@type": "City", "name": "Παλλήνη" }, { "@type": "City", "name": "Σπάτα" }, { "@type": "City", "name": "Κορωπί" }, { "@type": "City", "name": "Μαρκόπουλο" }, { "@type": "City", "name": "Ραφήνα" }, { "@type": "City", "name": "Αρτέμιδα" }],
   "sameAs": ["https://www.instagram.com/ebo.ee_construction/"],
   "openingHoursSpecification": [
     { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "08:00", "closes": "19:00" }

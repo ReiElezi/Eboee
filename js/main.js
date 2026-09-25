@@ -87,6 +87,7 @@
     renderFilters();
     renderProjects();
     renderContactInfo();
+    renderReviews();
     observeReveals();
   }
 
@@ -138,7 +139,7 @@
     if (!grid) return;
     grid.innerHTML = DATA.projects.map((p, i) => `
       <figure class="proj reveal" data-index="${i}" data-cat="${esc(p.cat)}" data-delay="${i % 3}">
-        <img src="${esc(p.img)}" alt="${esc(d(p, "t"))}" loading="lazy">
+        <img src="${esc(p.img)}" alt="${esc(d(p, "t"))}" loading="lazy" decoding="async">
         <figcaption class="proj-cap glass">
           <strong>${esc(d(p, "t"))}</strong>
           <span>${esc(d(p, "p"))}</span>
@@ -151,6 +152,46 @@
 
   function applyFilter() {
     $$(".proj").forEach(p => p.classList.toggle("is-hidden", activeFilter !== "all" && p.dataset.cat !== activeFilter));
+  }
+
+  // Reviews come from js/reviews.json, written by fetch-reviews.ps1 at
+  // publish time from the Google Places API — never fetched with a live
+  // API key in the visitor's browser. The section stays hidden until that
+  // file exists with at least one review.
+  let reviewsLoaded = null; // cached response, so a language switch doesn't refetch
+  async function renderReviews() {
+    const section = $("#reviews");
+    if (!section) return;
+    if (reviewsLoaded === null) {
+      try {
+        const res = await fetch("js/reviews.json", { cache: "no-store" });
+        reviewsLoaded = res.ok ? await res.json() : { reviews: [] };
+      } catch (e) {
+        reviewsLoaded = { reviews: [] };
+      }
+    }
+    const list = Array.isArray(reviewsLoaded.reviews) ? reviewsLoaded.reviews : [];
+    if (!list.length) { section.hidden = true; return; }
+
+    const localeMap = { el: "el-GR", en: "en-GB", sq: "sq-AL" };
+    const fmt = new Intl.DateTimeFormat(localeMap[lang] || "en-GB", { year: "numeric", month: "long" });
+
+    const grid = $("#reviewsGrid");
+    grid.innerHTML = list.map(r => `
+      <article class="review glass reveal">
+        <div class="review-stars" aria-label="${r.rating}/5">${"★".repeat(r.rating)}${"☆".repeat(Math.max(0, 5 - r.rating))}</div>
+        <p class="review-text">${esc(r.text)}</p>
+        <div class="review-meta"><strong>${esc(r.author)}</strong><span>${esc(fmt.format(new Date(r.date)))}</span></div>
+      </article>`).join("");
+
+    const cta = $("#reviewsCta");
+    const link = $("#reviewsGoogleLink");
+    if (reviewsLoaded.googleUrl && link) {
+      link.setAttribute("href", reviewsLoaded.googleUrl);
+      if (cta) cta.hidden = false;
+    }
+    section.hidden = false;
+    observeReveals();
   }
 
   function renderContactInfo() {
@@ -213,6 +254,20 @@
     $$(".reveal").forEach(el => {
       if (el.dataset.delay) el.style.setProperty("--d", el.dataset.delay);
       if (!el.classList.contains("is-in")) io.observe(el);
+    });
+  }
+
+  // The hero is always the first thing a visitor sees, so its reveal
+  // (including the stat counters) must run on load — it must not depend on
+  // scrolling, which on many viewport heights leaves hero-stats just below
+  // the fold and its counters stuck at "0" until the visitor scrolls.
+  function revealHeroNow() {
+    $$(".hero .reveal").forEach(el => {
+      if (el.dataset.delay) el.style.setProperty("--d", el.dataset.delay);
+      if (el.classList.contains("is-in")) return;
+      el.classList.add("is-in");
+      $$(".count", el).forEach(countUp);
+      io.unobserve(el);
     });
   }
 
@@ -294,12 +349,21 @@
     };
   }
 
+  // Nga cila reklame erdhi vizitori (e mbush js/track.js)
+  function adSource() {
+    return (window.EBO_TRACK && window.EBO_TRACK.source()) || "";
+  }
+  function fireLead(kind) {
+    document.dispatchEvent(new CustomEvent("ebo:lead", { detail: { kind: kind } }));
+  }
+
   function messageText(v) {
     return t("form.subject") + "\n" +
       t("form.name")  + ": " + v.name  + "\n" +
       t("form.phone") + ": " + v.phone + "\n" +
       (v.email ? t("form.email") + ": " + v.email + "\n" : "") +
-      t("form.type")  + ": " + v.type  + "\n\n" + v.msg;
+      t("form.type")  + ": " + v.type  + "\n\n" + v.msg +
+      (adSource() ? "\n\n— " + adSource() : "");
   }
 
   function validate() {
@@ -367,6 +431,7 @@
           "?subject=" + encodeURIComponent(t("form.subject")) +
           "&body=" + encodeURIComponent(messageText(v));
         showStatus(t("form.mailOpening"), "ok");
+        fireLead("email");
         return;
       }
 
@@ -381,9 +446,10 @@
       const payload = mode === "web3forms"
         ? { access_key: key, subject: t("form.subject"), from_name: "EBO.EE website",
             name: v.name, phone: v.phone, email: v.email || "no-reply@ebo.ee",
-            type: v.type, message: v.msg }
+            type: v.type, message: v.msg, source: adSource() || "organic" }
         : { _subject: t("form.subject"), _template: "table", _captcha: "false",
-            name: v.name, phone: v.phone, email: v.email || "", type: v.type, message: v.msg };
+            name: v.name, phone: v.phone, email: v.email || "", type: v.type, message: v.msg,
+            source: adSource() || "organic" };
 
       try {
         const res = await fetch(endpoint, {
@@ -395,6 +461,7 @@
         // web3forms answers success:true, formsubmit answers success:"true"
         if (res.ok && String(out.success) === "true") {
           showStatus(t("form.ok"), "ok");
+          fireLead("form");
           form.reset();
           updateWaLinks();
         } else {
@@ -427,6 +494,7 @@
 
   applyLang(lang);
   onScroll();
+  revealHeroNow();
 
   // the pill must be measured after layout, and again once webfonts settle
   requestAnimationFrame(moveLangPill);
